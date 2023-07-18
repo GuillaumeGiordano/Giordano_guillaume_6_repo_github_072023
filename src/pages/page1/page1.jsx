@@ -7,7 +7,7 @@ export default function Page1() {
   
     return (
       <main className="">
-      <h1>Questionnaire 🧮</h1>
+      <h2>Questionnaire 🧮</h2>
       <Link to="client">Questionnaire Client</Link>
       <Link to="freelance">Questionnaire Freelance</Link>
       <Outlet />

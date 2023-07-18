@@ -10,8 +10,8 @@ import Page1 from './pages/page1/page1'
 // Compoments
 import Header from './components/header/header'
 import Footer from './components/footer/footer'
-import ClientForm from './components/ClientForm/'
-import FreelanceForm from './components/FreelanceForm/'
+import ClientForm from './components/ClientForm'
+import FreelanceForm from './components/FreelanceForm'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -21,10 +21,14 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/page1" element={<Page1 />} />
+
+        <Route path="/page1" element={<Page1 />}>
+          {/* Nous imbriquons nos composants dans page1 */}
+          <Route path="client" element={<ClientForm />} />
+          <Route path="freelance" element={<FreelanceForm />} />
+        </Route>
+
         <Route path="*" element={<ErrorPage />} />
-        <Route path="client" element={<ClientForm />} />
-        <Route path="freelance" element={<FreelanceForm />} />
       </Routes>
       <Footer />
     </Router>
