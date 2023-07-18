@@ -10,8 +10,8 @@ import Page1 from './pages/page1/page1'
 // Compoments
 import Header from './components/header/header'
 import Footer from './components/footer/footer'
-import ClientForm from './components/ClientForm'
-import FreelanceForm from './components/FreelanceForm'
+import ClientForm from './components/ClientForm/'
+import FreelanceForm from './components/FreelanceForm/'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
