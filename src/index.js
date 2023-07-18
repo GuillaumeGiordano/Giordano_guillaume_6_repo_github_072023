@@ -1,13 +1,33 @@
+// Syteme
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import './index.css'
-import App from './App'
 import reportWebVitals from './reportWebVitals'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+// Pages
+import Home from './pages/home/home-page'
+import ErrorPage from './pages/error-page/error-page'
+import Page1 from './pages/page1/page1'
+// Compoments
+import Header from './components/header/header'
+import Footer from './components/footer/footer'
+import ClientForm from './components/ClientForm'
+import FreelanceForm from './components/FreelanceForm'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
+
 root.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/page1" element={<Page1 />} />
+        <Route path="*" element={<ErrorPage />} />
+        <Route path="client" element={<ClientForm />} />
+        <Route path="freelance" element={<FreelanceForm />} />
+      </Routes>
+      <Footer />
+    </Router>
   </React.StrictMode>
 )
 
