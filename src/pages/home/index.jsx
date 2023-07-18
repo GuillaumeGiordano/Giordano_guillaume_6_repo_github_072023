@@ -1,12 +1,15 @@
 // STYLE CSS
-import '../../styles/home-page.css'
+import '../../styles/home.css'
+import falaise from '../../assets/img/falaises.jpg';
 
 export default function Home() {
   
     return (
-      <main className="">
-        <h1>Le titre de ma page principale !</h1>
-        <p>Ici sera ma premiere page internet</p>
+      <main className="main">
+        <section className='main_header'>
+        <img src={ falaise } className='img' alt="falaise avec ocean" />
+        <p >Chez vous, partout et ailleurs</p>
+        </section>
       </main>
     );
 }

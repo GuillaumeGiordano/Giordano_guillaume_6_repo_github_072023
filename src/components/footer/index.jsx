@@ -1,10 +1,11 @@
-import { Link } from 'react-router-dom'
- 
+import '../../styles/footer.css'
+import logo from '../../assets/vector.svg';
+
 export default function Footer() {
     return (
-        <footer>
-            <h2>C'est mon footer ici</h2>
-            <Link to="/contact">Me contacter !</Link>
+        <footer className='footer'>
+            <h2>K<img src={logo} className="house-logo" alt="house logo" />sa</h2>
+            <p>&copy; 2020 Kasa. All rights reserved.</p>
         </footer>
     )
 }
