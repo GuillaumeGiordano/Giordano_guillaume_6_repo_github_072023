@@ -5,7 +5,7 @@ export default function Header() {
         <header className="">
         <nav>
             <Link to="/">Accueil</Link>
-            <Link to="/page1">Ma page 1</Link>
+            <Link to="/page1/42">Ma page 1</Link>
         </nav>
         </header> 
     )
