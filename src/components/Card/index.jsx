@@ -9,7 +9,6 @@ function Card({ id , title, cover, description }) {
     return (
         <Link to={"FicheLogement/" + id}>  
         <div className="card">
-            
             <span><img src={cover} className='img-gallery' alt={description} height={340} width={340} />{title}</span>
         </div></Link>
     )
