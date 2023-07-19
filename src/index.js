@@ -12,7 +12,7 @@ import FicheLogement from './pages/FicheLogement'
 import APropos from './pages/APropos'
 // Compoments
 import Header from './components/header'
-import Footer from './components/footer'
+import Footer from './components/Footer'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
@@ -22,8 +22,8 @@ root.render(
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/FicheLogement/:idlogement" element={<FicheLogement />} />
         <Route path="/APropos" element={<APropos />} />
-        <Route path="/FicheLogement" element={<FicheLogement />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

@@ -25,3 +25,13 @@
   font-size: 2rem;
   color: #fff;
 }
+
+.contener {
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3.75rem;
+  border-radius: 1.5625rem;
+  background: #f6f6f6;
+}
