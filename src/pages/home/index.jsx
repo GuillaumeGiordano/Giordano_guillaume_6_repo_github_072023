@@ -1,40 +1,49 @@
 // SYSTEM
-
+import { Link } from 'react-router-dom'
+// import { useFetch } from '../utils/hooks'
 // STYLE CSS
 import '../../styles/home.css'
-// PHOTOS
-import falaise from '../../assets/img/falaises.jpg';
 // COMPONENTS
-import Card from '../../components/Card';
+import MainHead from '../../components/MainHead'
+import Card from '../../components/Card'
+import Loader from '../../components/Loader'
 // DATAS
-import { myDataJSON } from './test.js';
-
+import { myDataJSON } from './test.js'
 
 export default function Home() {
-  
-const myData = myDataJSON()
+  const myData = myDataJSON()
+  const isLoading = false
+
+  // const { data, isLoading, error } = useFetch(`http://localhost:8000/survey`)
+  // const { myData } = data
+  // if (error) {
+  //   return <span>Il y a un problème</span>
+  // }
 
   return (
     <main className="main">
+      <MainHead />
 
-      <section className='main_header'>
-        <img src={ falaise } className='img' alt="falaise avec ocean" />
-        <p >Chez vous, partout et ailleurs</p>
-      </section>
-
-      <section className="contener">
-      {myData.map((logement) => ( // MAP ==> methode comme foreach voir doc !
-              <Card
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <section className="contener">
+          {myData.map(
+            (
+              logement // MAP ==> methode comme foreach voir doc !
+            ) => (
+              <Link to={'/FicheLogement/' + logement.id}>
+                <Card
                   key={logement.id}
-                  id={logement.id}
                   cover={logement.cover}
                   title={logement.title}
                   description={logement.description}
-
-              />
-          ))}
-      </section>
-
+                />
+              </Link>
+            )
+          )}
+        </section>
+      )}
     </main>
-  );
+  )
 }
