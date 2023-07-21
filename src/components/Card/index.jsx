@@ -7,7 +7,9 @@ function Card({ title, cover, description }) {
   return (
     <div className="card">
       <img src={cover} className="card__img" alt={description} height={340} width={340} />
-      <span className="card__span">{title}</span>
+      <div className="card__title">
+        <span>{title}</span>
+      </div>
     </div>
   )
 }
