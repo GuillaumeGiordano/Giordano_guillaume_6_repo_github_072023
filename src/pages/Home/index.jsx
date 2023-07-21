@@ -1,6 +1,6 @@
 // SYSTEM
 import { Link } from 'react-router-dom'
-import { useFetch } from '../../utils/hooks'
+import { useFetch } from '../../Utils/hooks'
 // STYLE CSS
 import '../../styles/home.css'
 // COMPONENTS
