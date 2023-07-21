@@ -27,7 +27,7 @@ export default function Home() {
       {isLoading ? (
         <Loader />
       ) : (
-        <section className="contener">
+        <section className="main__ctn">
           {myData.map(
             (
               logement // MAP ==> methode comme foreach voir doc !
