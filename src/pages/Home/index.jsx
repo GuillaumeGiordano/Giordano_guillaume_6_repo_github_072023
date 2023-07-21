@@ -1,24 +1,19 @@
 // SYSTEM
 import { Link } from 'react-router-dom'
-// import { useFetch } from '../utils/hooks'
+import { useFetch } from '../../utils/hooks'
 // STYLE CSS
 import '../../styles/home.css'
 // COMPONENTS
 import MainHead from '../../components/MainHead'
 import Card from '../../components/Card'
 import Loader from '../../components/Loader'
-// DATAS
-import { myDataJSON } from './test.js'
 
 export default function Home() {
-  const myData = myDataJSON()
-  const isLoading = false
+  const { data, isLoading, error } = useFetch(`data.json`)
 
-  // const { data, isLoading, error } = useFetch(`http://localhost:8000/survey`)
-  // const { myData } = data
-  // if (error) {
-  //   return <span>Il y a un problème</span>
-  // }
+  if (error) {
+    return <span>Il y a un problème</span>
+  }
 
   return (
     <main className="main">
@@ -28,7 +23,7 @@ export default function Home() {
         <Loader />
       ) : (
         <section className="main__ctn">
-          {myData.map(
+          {data.map(
             (
               logement // MAP ==> methode comme foreach voir doc !
             ) => (

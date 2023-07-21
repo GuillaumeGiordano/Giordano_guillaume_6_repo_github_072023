@@ -11,7 +11,7 @@ import Error from './pages/Error'
 import FicheLogement from './pages/FicheLogement'
 import APropos from './pages/APropos'
 // Compoments
-import Header from './components/header'
+import Header from './components/Header'
 import Footer from './components/Footer'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
