@@ -1,33 +1,16 @@
-// Syteme
+// SYSTEM
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import reportWebVitals from './reportWebVitals'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-// Style
+import App from './App'
+// STYLE CSS
 import './index.css'
-// Pages
-import Home from './pages/Home'
-import Error from './pages/Error'
-import FicheLogement from './pages/FicheLogement'
-import APropos from './pages/APropos'
-// Compoments
-import Header from './components/header'
-import Footer from './components/Footer'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
   <React.StrictMode>
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/FicheLogement/:idlogement" element={<FicheLogement />} />
-        <Route path="/APropos" element={<APropos />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <App />
   </React.StrictMode>
 )
 

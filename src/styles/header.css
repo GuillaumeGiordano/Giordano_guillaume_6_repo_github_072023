@@ -8,6 +8,7 @@
   font-family: Montserrat;
   color: #ff6060;
   width: 90%;
+  max-width: 1240px;
   margin: auto;
   margin-top: 15px;
 }
