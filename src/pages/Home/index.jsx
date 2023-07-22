@@ -16,7 +16,7 @@ export default function Home() {
   }
 
   return (
-    <main className="main">
+    <>
       <MainHead />
 
       {isLoading ? (
@@ -39,6 +39,6 @@ export default function Home() {
           )}
         </section>
       )}
-    </main>
+    </>
   )
 }

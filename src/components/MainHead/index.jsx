@@ -11,8 +11,8 @@ export default function MainHead() {
       SINON
       tu affiche l'autre photo pour APropos
       */}
-      <img src={falaise} className="img" alt="falaise avec ocean" />
-      <p>Chez vous, partout et ailleurs</p>
+      <img src={falaise} className="header__img" alt="falaise avec ocean" />
+      <p className="header__title">Chez vous, partout et ailleurs</p>
     </section>
   )
 }

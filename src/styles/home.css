@@ -1,11 +1,3 @@
-.main {
-  /* border: 1px solid black; */
-  width: 90%;
-  max-width: 1240px;
-  margin: auto;
-  margin-top: 20px;
-}
-
 .main__ctn {
   padding: 3.2rem;
   display: flex;

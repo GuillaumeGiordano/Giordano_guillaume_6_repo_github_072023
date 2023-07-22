@@ -5,12 +5,12 @@ import PropTypes from 'prop-types'
 
 function Card({ title, cover, description }) {
   return (
-    <div className="card">
+    <article className="card">
       <img src={cover} className="card__img" alt={description} height={340} width={340} />
       <div className="card__title">
         <span>{title}</span>
       </div>
-    </div>
+    </article>
   )
 }
 
