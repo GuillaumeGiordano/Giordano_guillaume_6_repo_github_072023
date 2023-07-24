@@ -1,7 +1,5 @@
 // PHOTOS
 import falaise from '../../assets/img/falaises.jpg'
-// STYLE CSS
-import '../../styles/mainHead.css'
 
 export default function MainHead() {
   return (

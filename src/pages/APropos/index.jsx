@@ -1,5 +1,3 @@
-// STYLE CSS
-import '../../styles/aPropos.css'
 import falaise from '../../assets/img/montagnes.jpg'
 
 export default function APropos() {

@@ -1,8 +1,6 @@
 // SYSTEM
 import { Link } from 'react-router-dom'
 import { useFetch } from '../../utils/hooks'
-// STYLE CSS
-import '../../styles/home.css'
 // COMPONENTS
 import MainHead from '../../components/MainHead'
 import Card from '../../components/Card'

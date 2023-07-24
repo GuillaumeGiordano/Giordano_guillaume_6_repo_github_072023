@@ -1,5 +1,3 @@
-//STYLES
-import '../../styles/card.css'
 // SYSTEME
 import PropTypes from 'prop-types'
 
