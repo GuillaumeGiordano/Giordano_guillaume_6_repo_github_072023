@@ -1,6 +1,6 @@
 // SYSTEM
 import { Link } from 'react-router-dom'
-import { useFetch } from '../../utils/hooks'
+import { useFetch } from '../../utils/hooks/useFetch'
 // COMPONENTS
 import MainHead from '../../components/MainHead'
 import Card from '../../components/Card'
@@ -22,12 +22,12 @@ export default function Home() {
       ) : (
         <section className="main__ctn">
           {data.map(
-            (
-              logement // MAP ==> methode comme foreach voir doc !
-            ) => (
-              <Link to={'/FicheLogement/' + logement.id}>
+            // MAP ==> methode comme foreach voir doc !
+            (logement, index) => (
+              <Link key={logement.id} to={'/FicheLogement/' + index}>
                 <Card
-                  key={logement.id}
+                  // index={index}
+                  id={logement.id}
                   cover={logement.cover}
                   title={logement.title}
                   description={logement.description}
