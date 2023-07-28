@@ -1,4 +1,6 @@
 import falaise from '../../assets/img/montagnes.jpg'
+import row from '../../assets/row.png'
+
 import useToggle from '../../utils/hooks/useToggle'
 
 export default function APropos() {
@@ -9,27 +11,89 @@ export default function APropos() {
 
   return (
     <>
-      <section className="main_header">
+      <section className="APropos">
         <img src={falaise} className="header__img" alt="falaise avec ocean" />
-        <div onClick={changeMe1}>
-          <span>Afficher le compteur stp Fiabilité</span>
-          {value1 && <div>kjfvn vfjhsfv fsv vsfvs vsih vsvoij </div>}
-        </div>
 
-        <div onClick={changeMe2}>
-          <span>Afficher le compteur stp Fiabilité</span>
-          {value2 && <div>kjfvn vfjhsfv fsv vsfvs vsih vsvoij </div>}
+        {/* Fiabilité */}
+        <div className="collapse-btn" onClick={changeMe1}>
+          <span>Fiabilité</span>
+          {value1 ? (
+            <img src={row} className="row row-top" alt="fléche de navigation"></img>
+          ) : (
+            <img src={row} className="row row-down" alt="fléche de navigation"></img>
+          )}
         </div>
+        {value1 ? (
+          <div className="collapse-info  down">
+            <p>
+              Les annonces podtée sur Kasa garantissent une fiabilité total. Les photos
+              sont conformes aux logements, et toutes les informations sont régulièrement
+              vérifiées par nos équipes.
+            </p>
+          </div>
+        ) : (
+          <div className="collapse-info  up">
+            <p>
+              Les annonces podtée sur Kasa garantissent une fiabilité total. Les photos
+              sont conformes aux logements, et toutes les informations sont régulièrement
+              vérifiées par nos équipes.
+            </p>
+          </div>
+        )}
 
-        <div onClick={changeMe3}>
-          <span>Afficher le compteur stp Fiabilité</span>
-          {value3 && <div>kjfvn vfjhsfv fsv vsfvs vsih vsvoij </div>}
+        {/* Respect */}
+        <div className="collapse-btn" onClick={changeMe2}>
+          <span>Respect</span>
+          {value2 ? (
+            <img src={row} className="row row-top" alt="fléche de navigation"></img>
+          ) : (
+            <img src={row} className="row row-down" alt="fléche de navigation"></img>
+          )}
         </div>
+        {value2 && (
+          <div className="collapse-info down">
+            La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
+            comportement discriminatoire ou de perturbation du voisinage entraînera une
+            exclusion de notre plateforme.
+          </div>
+        )}
 
-        <div onClick={changeMe4}>
-          <span>Afficher le compteur stp Fiabilité</span>
-          {value4 && <div>kjfvn vfjhsfv fsv vsfvs vsih vsvoij </div>}
+        {/* Service */}
+        <div className="collapse" onClick={changeMe3}>
+          <span>Service</span>
+          {value3 ? (
+            <img src={row} className="row row-top" alt="fléche de navigation"></img>
+          ) : (
+            <img src={row} className="row row-down" alt="fléche de navigation"></img>
+          )}
         </div>
+        {value3 && (
+          <div className="collapse-info">
+            {' '}
+            La bienveillance fait partie des valeurs fondatrices de Kasa. Tout
+            comportement discriminatoire ou de perturbation du voisinage entraînera une
+            exclusion de notre plateforme.
+          </div>
+        )}
+
+        {/* Sécurité */}
+        <div className="collapse" onClick={changeMe4}>
+          <span>Sécurité</span>
+          {value4 ? (
+            <img src={row} className="row row-top" alt="fléche de navigation"></img>
+          ) : (
+            <img src={row} className="row row-down" alt="fléche de navigation"></img>
+          )}
+        </div>
+        {value4 && (
+          <div className="collapse-info">
+            La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les
+            voyageurs, chaque logement correspond aux critères de sécurité établis par nos
+            services. En laissant une note aussi bien à l'hôte qu'au locataire, cela
+            permet à nos équipes de vérifier que les standards sont bien respectés. Nous
+            organisons égualement des ateliers sur la sécurité domestique pour nos hôtes.
+          </div>
+        )}
       </section>
     </>
   )
