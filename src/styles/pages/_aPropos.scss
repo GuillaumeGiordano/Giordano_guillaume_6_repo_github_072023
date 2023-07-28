@@ -1,5 +1,4 @@
 .collapse-btn{
-    // border: 1px solid red;
     background-color: $primary-color-text;
     display: flex;
     justify-content: space-between;
@@ -10,6 +9,7 @@
     margin: auto;
     margin-top: 20px;
     cursor: pointer;
+
     span{
         margin: 10px;
         color: white;
@@ -28,22 +28,20 @@
     }
 }
 
-.collapse-info{
+.collapse-btn--open{
+    border-radius: 5px 5px 0 0;
+    }
+
+.content {
     background-color:  #F6F6F6;
     border-radius: 0 0 5px 5px;
-    overflow: hidden;
-    transition:  max-height  1s ;
-    height: auto;
     width: 80%;
     margin: auto;
-    p{
-        margin: 15px;
-    }
+    padding: 1rem;
 }
-.up{
-    max-height: 0px;
+    
+.content-parent {
+    height: 0px;
+    overflow: hidden;
+    transition: height ease 0.9s;
 }
-.down{
-    max-height:150px;
-}
-
