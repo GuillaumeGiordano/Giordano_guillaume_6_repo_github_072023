@@ -1,13 +1,27 @@
+.aPropos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+// ICI COMMENCE LE COLLAPSE !!!!!!!!!!!!
+.collapse{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
 .collapse-btn{
     background-color: $primary-color-text;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
-    height: 52px;
-    width: 80%;
+    height: 50px;
+    width: 100%; 
     margin: auto;
-    margin-top: 20px;
     cursor: pointer;
 
     span{
@@ -35,7 +49,7 @@
 .content {
     background-color:  #F6F6F6;
     border-radius: 0 0 5px 5px;
-    width: 80%;
+    width: 100%; 
     margin: auto;
     padding: 1rem;
 }

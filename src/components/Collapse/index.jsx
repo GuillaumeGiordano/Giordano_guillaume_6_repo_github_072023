@@ -2,12 +2,12 @@ import { React, useRef } from 'react'
 import useToggle from '../../utils/hooks/useToggle'
 import row from '../../assets/row.png'
 
-export default function Collapse({ title, description }) {
+export default function Collapse({ title, description, width }) {
   const [isOpen, changeMe] = useToggle()
   const contentRef = useRef()
 
   return (
-    <>
+    <div className="collapse" style={{ width: width }}>
       <div
         className={isOpen ? 'collapse-btn collapse-btn--open' : 'collapse-btn'}
         onClick={changeMe}
@@ -30,6 +30,6 @@ export default function Collapse({ title, description }) {
       >
         <p className="content">{description}</p>
       </div>
-    </>
+    </div>
   )
 }
