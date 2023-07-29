@@ -1,10 +1,37 @@
-.center {
-  border: 1px solid black;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@keyframes flash {
+  0%   {
+    font-weight: 600;
+    scale: 1;
+  }
+  50%  {
+    font-weight: 300;
+    scale: 1.1;
+  }
+  100%  {
+    font-weight: 600;
+    scale: 1;
+  }
 }
 
-// ICI commence mon premier commit
+.error {
+  @extend %centerByFlexBoxe;
+  flex-direction: column;
+
+  .error__title{
+    font-size: 280px;
+    margin: 30px;
+  }
+  .error__text{
+    font-size: 36px;
+    margin: 30px;
+  }
+  .error__link{
+    font-size: 20px;
+    margin: 50px;
+    text-decoration:underline;
+    animation-name: flash;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+  }
+}
