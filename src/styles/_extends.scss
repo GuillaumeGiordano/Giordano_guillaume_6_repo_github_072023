@@ -10,3 +10,8 @@
 //     @extend %message-shared;
 //   }
   
+%centerByFlexBoxe{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -9,7 +9,7 @@ export default function Header() {
       <nav>
         <ul className="menu">
           <li className="menu_item">
-            <Link to="/">Acceuil</Link>
+            <Link to="/">Accueil</Link>
           </li>
           <li className="menu_item">
             <Link to="/APropos">A Propos</Link>
