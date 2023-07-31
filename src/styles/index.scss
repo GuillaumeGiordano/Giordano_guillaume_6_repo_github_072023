@@ -1,0 +1,37 @@
+// Variables
+@import './abstract/variables';
+// EXTENDS
+@import './abstract/extends';
+// MIXINS
+@import './abstract/mixins';
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: $primary-color-text;
+}
+
+body {
+  margin: auto;
+}
+
+.main {
+  width: 90%;
+  max-width: 1240px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+// PAGES
+@import './pages/aPropos';
+@import './pages/error';
+@import './pages/ficheLogement';
+@import './pages/home';
+// HEADER & FOOTER
+@import './layout/header';
+@import './layout/footer';
+// COMPONENTS
+@import './components/card';
+@import './components/mainHead';
+@import './components/collapse';
