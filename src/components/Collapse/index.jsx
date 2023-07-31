@@ -2,7 +2,7 @@ import { React, useRef } from 'react'
 import useToggle from '../../utils/hooks/useToggle'
 import row from '../../assets/row.png'
 
-export default function Collapse({ title, description, width }) {
+export default function Collapse({ title, children, width }) {
   const [isOpen, changeMe] = useToggle()
   const contentRef = useRef()
 
@@ -15,20 +15,28 @@ export default function Collapse({ title, description, width }) {
         <span>{title}</span>
 
         {isOpen ? (
-          <img src={row} className="row row-top" alt="fléche de navigation"></img>
+          <img
+            src={row}
+            className="collapse__row collapse__row--top"
+            alt="fléche de navigation"
+          ></img>
         ) : (
-          <img src={row} className="row row-down" alt="fléche de navigation"></img>
+          <img
+            src={row}
+            className="collapse__row collapse__row--down"
+            alt="fléche de navigation"
+          ></img>
         )}
       </div>
 
       <div
         ref={contentRef}
-        className="content-parent"
+        className="collapse__content-parent"
         style={
           isOpen ? { height: contentRef.current.scrollHeight + 'px' } : { height: '0px' }
         }
       >
-        <p className="content">{description}</p>
+        <div className="collapse__content-childreen ">{children}</div>
       </div>
     </div>
   )

@@ -1,10 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import Collapse from '../Collapse'
+import Slider from '../Slider'
+// IMAGES
 import star_full from '../../assets/star_full.png'
 import star_empty from '../../assets/star_empty.png'
 
 export default function Logement({ data }) {
-  const { id, title, cover, location, host, tags, rating, description } = data
+  const {
+    id,
+    title,
+    cover,
+    location,
+    host,
+    tags,
+    rating,
+    description,
+    equipments,
+    pictures,
+  } = data
 
   function useStars(rating) {
     const [stars, setStars] = useState([])
@@ -22,21 +35,19 @@ export default function Logement({ data }) {
     return stars
   }
 
-  console.log(data)
-
   return (
     <section className="accomodation" id={id}>
-      {/* {JSON.stringify(data.host)} */}
-      {/* Mettre le carrousel !!!! */}
-      <img src={cover} className="accomodation__head" alt="falaise avec ocean" />
+      <Slider cover={cover} pictures={pictures} />
 
       <div className="accomodation__body">
         <div className="infos">
           <h1 className="infos__title">{title}</h1>
           <p className="infos__location">{location}</p>
           <ul className="infos__tags">
-            {tags.map((tag) => (
-              <li className="infos__tag">{tag}</li>
+            {tags.map((tag, index) => (
+              <li key={index} className="infos__tag">
+                {tag}
+              </li>
             ))}
           </ul>
         </div>
@@ -47,9 +58,10 @@ export default function Logement({ data }) {
             <img className="profil__img" src={host.picture} alt="" />
           </div>
           <div className="stars">
-            {useStars(rating).map((star) =>
+            {useStars(rating).map((star, index) =>
               star === 'full' ? (
                 <img
+                  key={index}
                   src={star_full}
                   className=""
                   alt="star full pink"
@@ -58,6 +70,7 @@ export default function Logement({ data }) {
                 />
               ) : (
                 <img
+                  key={index}
                   src={star_empty}
                   className=""
                   alt="star empty grey"
@@ -71,12 +84,20 @@ export default function Logement({ data }) {
       </div>
 
       <div className="accomodation__footer">
-        {/* <div className="footer__left"> */}
-        <Collapse title="Description" description={description} width="45%" />
-        {/* </div>
-        <div className="footer__right"> */}
-        <Collapse title="Equipements" description={description} width="45%" />
-        {/* </div> */}
+        <Collapse title="Description" width="45%">
+          <p className="">{description}</p>
+        </Collapse>
+
+        <Collapse title="Equipements" width="45%">
+          {/* <p className="collapse__content-childreen">{description}</p> */}
+          <ul className="equipments">
+            {equipments.map((item, index) => (
+              <li key={index} className="equipments__item">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Collapse>
       </div>
     </section>
   )

@@ -1,0 +1,34 @@
+.slider{
+    position: relative;
+
+    .slider__img{
+        width: 100%;
+        height: 415px;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+    .slider__btn{
+        position: absolute;
+        height: 100px;
+        filter: opacity(50%);
+        transition: filter 1s;
+
+        &:hover{
+        filter: opacity(90%);
+        }
+
+        &--next{
+            top: 50%;
+            right: 20px;
+            transform: translate(0%, -50%);
+        }
+
+        &--previous{
+            top: 50%;
+            transform: translate(0%, -50%);
+            left: 20px;
+        }
+
+    }
+
+}

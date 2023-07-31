@@ -20,14 +20,14 @@
         color: white;
         font-weight: 600;
     }
-    .row{
+    .collapse__row{
         margin: 10px;
     }
-    .row-top{
+    .collapse__row--top{
         transform: rotate(-180deg);
         transition: transform 0.5s;
     }
-    .row-down{
+    .collapse__row--down{
         transform: rotate(0deg);
         transition: transform 0.5s; 
     }
@@ -37,15 +37,20 @@
     border-radius: 5px 5px 0 0;
     }
 
-.content {
+.collapse__content-childreen {
     background-color:  #F6F6F6;
     border-radius: 0 0 5px 5px;
     width: 100%; 
-    margin: auto;
+    margin: 0px;
     padding: 1rem;
+    // margin: auto;
+
+    p{
+        margin: 0px;
+    }
 }
     
-.content-parent {
+.collapse__content-parent {
     height: 0px;
     overflow: hidden;
     transition: height ease 0.9s;

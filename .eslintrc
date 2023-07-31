@@ -1,6 +1,5 @@
 {
     "extends": ["react-app"], 
-
     "plugins": [
       // ...
       "react-hooks"
