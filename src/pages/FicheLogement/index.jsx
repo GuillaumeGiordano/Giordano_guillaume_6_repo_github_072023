@@ -1,33 +1,30 @@
 // SYSTEM
 import { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useFetch } from '../../utils/hooks/useFetch'
+// import { useFetch } from '../../utils/hooks/useFetch'
 import Loader from '../../components/Loader'
 import Collapse from '../../components/Collapse'
 import Slider from '../../components/Slider'
 import Stars from '../../components/Stars'
 
-export default function FicheLogement() {
-  const { data, isLoading, error } = useFetch(`/data.json`)
+export default function FicheLogement({ data, isLoading, maxItems }) {
+  // const { data, isLoading, error } = useFetch(`/data.json`)
   const { indexLogement } = useParams()
+
   const navigate = useNavigate()
 
   useEffect(() => {
     if (isLoading) {
-      const maxItems = data.length
+      console.log('essai 1')
       if (indexLogement > maxItems) {
-        navigate('/error')
+        console.log('essai 2')
+        navigate('/FicheLogement')
       }
     }
   })
 
-  if (error) {
-    return <span>Il y a un problème</span>
-  }
-
   return (
     <>
-      {/* Opération ternaire */}
       {isLoading ? (
         <Loader />
       ) : (
