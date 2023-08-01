@@ -1,11 +1,24 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import Collapse from '../Collapse'
 import Slider from '../Slider'
 // IMAGES
-import star_full from '../../assets/star_full.png'
-import star_empty from '../../assets/star_empty.png'
+import Stars from '../Stars'
+import { useNavigate } from 'react-router-dom'
 
-export default function Logement({ data }) {
+export default function Logement({ data, maxItems, params }) {
+  const navigate = useNavigate()
+
+  function useIfExist(data) {
+    useEffect(() => {
+      if (!data) return
+
+      if (params > maxItems) {
+        return navigate('/')
+      }
+    }, [data])
+  }
+  useIfExist(data)
+
   const {
     id,
     title,
@@ -18,22 +31,6 @@ export default function Logement({ data }) {
     equipments,
     pictures,
   } = data
-
-  function useStars(rating) {
-    const [stars, setStars] = useState([])
-
-    useEffect(() => {
-      for (let i = 1; i <= 5; i++) {
-        if (i <= rating) {
-          setStars((star) => [...star, 'full'])
-        } else {
-          setStars((star) => [...star, 'empty'])
-        }
-      }
-    }, [rating])
-
-    return stars
-  }
 
   return (
     <section className="accomodation" id={id}>
@@ -57,29 +54,7 @@ export default function Logement({ data }) {
             <p className="profil__name">{host.name}</p>
             <img className="profil__img" src={host.picture} alt="" />
           </div>
-          <div className="stars">
-            {useStars(rating).map((star, index) =>
-              star === 'full' ? (
-                <img
-                  key={index}
-                  src={star_full}
-                  className=""
-                  alt="star full pink"
-                  width="24px"
-                  height="24px"
-                />
-              ) : (
-                <img
-                  key={index}
-                  src={star_empty}
-                  className=""
-                  alt="star empty grey"
-                  width="24px"
-                  height="24px"
-                />
-              )
-            )}
-          </div>
+          <Stars rating={rating} />
         </div>
       </div>
 
@@ -87,9 +62,7 @@ export default function Logement({ data }) {
         <Collapse title="Description" width="45%">
           <p className="">{description}</p>
         </Collapse>
-
         <Collapse title="Equipements" width="45%">
-          {/* <p className="collapse__content-childreen">{description}</p> */}
           <ul className="equipments">
             {equipments.map((item, index) => (
               <li key={index} className="equipments__item">

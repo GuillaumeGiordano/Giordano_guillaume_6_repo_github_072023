@@ -24,7 +24,7 @@ export default function Home() {
           {data.map(
             // MAP ==> methode comme foreach voir doc !
             (logement, index) => (
-              <Link key={logement.id} to={'/FicheLogement/' + index}>
+              <Link key={index} to={'/FicheLogement/' + index}>
                 <Card
                   // index={index}
                   id={logement.id}

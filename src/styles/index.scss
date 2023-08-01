@@ -16,21 +16,22 @@ body {
   margin: auto;
 }
 
+// HEADER & MAIN & FOOTER
+@import './layout/header';
 .main {
   width: 90%;
   max-width: 1240px;
   margin: auto;
   margin-top: 20px;
 }
+@import './layout/footer';
 
 // PAGES
 @import './pages/aPropos';
 @import './pages/error';
 @import './pages/ficheLogement';
 @import './pages/home';
-// HEADER & FOOTER
-@import './layout/header';
-@import './layout/footer';
+
 // COMPONENTS
 @import './components/card';
 @import './components/mainHead';
