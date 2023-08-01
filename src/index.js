@@ -4,14 +4,14 @@ import ReactDOM from 'react-dom/client'
 import reportWebVitals from './reportWebVitals'
 import App from './App'
 // STYLE CSS
-import './index.scss'
+import './styles/index.scss'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode> // build 2 fois tous mes coposants pour les tester, ca m'embete pour mes boucles !!
+  <App />
+  // </React.StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function

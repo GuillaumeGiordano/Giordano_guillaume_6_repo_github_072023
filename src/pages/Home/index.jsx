@@ -1,17 +1,13 @@
 // SYSTEM
 import { Link } from 'react-router-dom'
-import { useFetch } from '../../utils/hooks/useFetch'
+// import { useFetch } from '../../utils/hooks/useFetch'
 // COMPONENTS
 import MainHead from '../../components/MainHead'
 import Card from '../../components/Card'
 import Loader from '../../components/Loader'
 
-export default function Home() {
-  const { data, isLoading, error } = useFetch(`data.json`)
-
-  if (error) {
-    return <span>Il y a un problème</span>
-  }
+export default function Home({ data, isLoading }) {
+  // const { data, isLoading, error } = useFetch(`data.json`)
 
   return (
     <>
@@ -24,7 +20,7 @@ export default function Home() {
           {data.map(
             // MAP ==> methode comme foreach voir doc !
             (logement, index) => (
-              <Link key={logement.id} to={'/FicheLogement/' + index}>
+              <Link key={index} to={'/FicheLogement/' + index}>
                 <Card
                   // index={index}
                   id={logement.id}

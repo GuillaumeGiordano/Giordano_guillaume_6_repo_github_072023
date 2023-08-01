@@ -1,47 +1,5 @@
-.collapse-btn{
-    background-color: $primary-color-text;
+.aPropos{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    border-radius: 5px;
-    height: 52px;
-    width: 80%;
-    margin: auto;
-    margin-top: 20px;
-    cursor: pointer;
-
-    span{
-        margin: 10px;
-        color: white;
-        font-weight: 600;
-    }
-    .row{
-        margin: 10px;
-    }
-    .row-top{
-        transform: rotate(-180deg);
-        transition: transform 0.5s;
-    }
-    .row-down{
-        transform: rotate(0deg);
-        transition: transform 0.5s; 
-    }
-}
-
-.collapse-btn--open{
-    border-radius: 5px 5px 0 0;
-    }
-
-.content {
-    background-color:  #F6F6F6;
-    border-radius: 0 0 5px 5px;
-    width: 80%;
-    margin: auto;
-    padding: 1rem;
-}
-    
-.content-parent {
-    height: 0px;
-    overflow: hidden;
-    transition: height ease 0.9s;
 }

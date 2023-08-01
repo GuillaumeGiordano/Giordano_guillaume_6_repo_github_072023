@@ -1,0 +1,81 @@
+
+.accomodation{
+    .accomodation__body{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    .accomodation__footer{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+}
+
+.infos{
+    width: 80%;
+    .infos__title{
+        font-size: 36px;
+        margin: 0;
+    }
+    .infos__location{
+        margin: 0;
+    }
+    .infos__tags{
+        list-style-type: none;
+        margin: 0;
+        margin-top: 20px;
+        padding: 0;
+        display: flex;
+        justify-content: flex-start;
+
+        .infos__tag{
+            margin-right:  5px;
+            color: white;
+            text-align: center;
+            background-color: $primary-color-text;
+            padding: 5px 20px;
+            border-radius: 20px;
+        }
+    }
+}
+
+.side{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .profil{
+        display: flex;
+        align-items: center;
+        height: 60px;
+    
+        .profil__name{
+            margin-right: 10px;
+        }
+
+        .profil__img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+    }
+    
+    .stars{
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
+
+.equipments{
+    margin: 0px;
+    padding-left: 0px;
+
+    .equipments__item{
+        list-style: none;
+        margin-left: 10px;
+    }
+}
