@@ -1,12 +1,12 @@
 
 .accomodation{
-    .accomodation__body{
+    &__body{
         width: 100%;
         display: flex;
         justify-content: space-between;
         margin-top: 15px;
     }
-    .accomodation__footer{
+    &__footer{
         width: 100%;
         display: flex;
         align-items: flex-start;
@@ -16,14 +16,15 @@
 
 .infos{
     width: 80%;
-    .infos__title{
+    
+    &__title{
         font-size: 36px;
         margin: 0;
     }
-    .infos__location{
+    &__location{
         margin: 0;
     }
-    .infos__tags{
+    &__tags{
         list-style-type: none;
         margin: 0;
         margin-top: 20px;
@@ -52,11 +53,18 @@
         align-items: center;
         height: 60px;
     
-        .profil__name{
+        &__boxName{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        &__name{
+            margin: 0px;
             margin-right: 10px;
+            margin-top: 10px;
         }
 
-        .profil__img{
+        &__img{
             width: 60px;
             height: 60px;
             border-radius: 50%;
@@ -74,7 +82,7 @@
     margin: 0px;
     padding-left: 0px;
 
-    .equipments__item{
+    &__item{
         list-style: none;
         margin-left: 10px;
     }
