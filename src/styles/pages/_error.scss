@@ -17,15 +17,17 @@
   @extend %centerByFlexBoxe;
   flex-direction: column;
 
-  .error__title{
-    font-size: 280px;
+  &__title{
+    font-size: 20em;
     margin: 30px;
   }
-  .error__text{
+
+  &__text{
     font-size: 36px;
     margin: 30px;
   }
-  .error__link{
+
+  &__link{
     font-size: 20px;
     margin: 50px;
     text-decoration:underline;
@@ -34,4 +36,10 @@
     animation-delay: 5s;
     animation-iteration-count: infinite;
   }
+}
+
+@media screen and (max-width: 600px) {
+
+  
+
 }

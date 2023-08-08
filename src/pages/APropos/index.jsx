@@ -5,7 +5,10 @@ export default function APropos() {
   return (
     <>
       <section className="aPropos">
-        <img src={falaise} className="header__img" alt="falaise avec ocean" />
+        <section className="main__header">
+          <img src={falaise} className="header__img" alt="falaise avec ocean" />
+        </section>
+
         <Collapse title="Fiabilité" width="80%">
           <p className="">
             Les annonces podtée sur Kasa garantissent une fiabilité total. Les photos sont

@@ -1,42 +1,28 @@
-// import { useState } from 'react'
-import { useEffect, useRef, useState } from 'react'
 import logo from '../../assets/logo/LOGO.svg'
-// SYSTEME
-import { Link } from 'react-router-dom'
-// import useToggle from '../../utils/hooks/useToggle'
-// import { React,  useRef } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
-  const ref1 = useRef()
-  const ref2 = useRef()
-
-  let essai = 'menu_item'
-
-  // console.log(ref1.current.className)
-  // console.log(ref2.current.className)
-
-  // console.log((essai += ' menu_item--active'))
-
-  function useActiveMe(ref) {
-    const [acitve, setActive] = useState('active')
-
-    useEffect(() => {
-      setActive('')
-      console.log('proute')
-    }, [ref])
-  }
-
   return (
     <header className="header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <nav>
-        <ul className="menu">
-          <li id="accueil" ref={ref1} className={essai} onChange={useActiveMe(ref1)}>
-            <Link to="/">Accueil</Link>
+      <img src={logo} className="header__logo" alt="logo" />
+      <nav className="header__nav">
+        <ul className="header__menu">
+          <li id="accueil" className="menu__item">
+            <NavLink
+              className={({ isActive }) => (isActive ? 'menu__item--active' : '')}
+              to="/"
+            >
+              Accueil
+            </NavLink>
           </li>
 
-          <li id="apropos" ref={ref2} className={essai} onChange={useActiveMe(ref2)}>
-            <Link to="/APropos">A Propos</Link>
+          <li id="apropos" className="menu__item">
+            <NavLink
+              className={({ isActive }) => (isActive ? 'menu__item--active' : '')}
+              to="/APropos"
+            >
+              A Propos
+            </NavLink>
           </li>
         </ul>
       </nav>
