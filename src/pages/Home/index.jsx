@@ -14,6 +14,10 @@ export default function Home() {
     return <span>Il y a un problème</span>
   }
 
+  if (isLoading) {
+    return <Loader />
+  }
+
   return (
     <>
       <section className="main__header">

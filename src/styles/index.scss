@@ -16,7 +16,11 @@
 body {
   margin: auto;
 }
-
+.App{
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
 // HEADER & MAIN & FOOTER
 @import './layout/header';
 .main {
@@ -35,15 +39,15 @@ body {
 
 // COMPONENTS
 @import './components/card';
-@import './components/mainHead';
 @import './components/collapse';
 @import './components/slider';
+@import './components/loader';
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 779px) {
   
   *{
-    font-size: 0.98em;
+    font-size: 98%;
   }
 
 }
