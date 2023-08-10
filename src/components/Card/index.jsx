@@ -4,14 +4,7 @@ import PropTypes from 'prop-types'
 function Card({ id, title, cover, description }) {
   return (
     <article className="card" id={'card-' + id}>
-      <img
-        src={cover}
-        className="card__img"
-        id={'img-' + id}
-        alt={description}
-        height={340}
-        width={340}
-      />
+      <img src={cover} className="card__img" id={'img-' + id} alt={description} />
       <div className="card__title" id={'filtre-' + id}>
         <span id={'title-' + id}>{title}</span>
       </div>

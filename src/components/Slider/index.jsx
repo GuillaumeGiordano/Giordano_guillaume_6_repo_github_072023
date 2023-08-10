@@ -10,17 +10,6 @@ export default function Slider({ pictures }) {
   return (
     <div className="slider">
       <img src={pictures[index]} className="slider__img" alt="" />
-
-      {/* {pictures.map((pic, index) => (
-        <img
-          key={index}
-          src={pic}
-          className="slider__img"
-          alt=""
-          style={{ display: 'none' }}
-        />
-      ))} */}
-
       <img
         onClick={handleNext}
         src={previous}

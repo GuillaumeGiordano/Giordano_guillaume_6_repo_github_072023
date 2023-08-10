@@ -14,7 +14,7 @@ export default function Stars({ rating }) {
           <img
             key={index}
             src={star_full}
-            className=""
+            className="stars__img"
             alt="star full pink"
             width="24px"
             height="24px"
@@ -23,7 +23,7 @@ export default function Stars({ rating }) {
           <img
             key={index}
             src={star_empty}
-            className=""
+            className="stars__img"
             alt="star empty grey"
             width="24px"
             height="24px"

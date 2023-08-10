@@ -1,18 +1,28 @@
 import logo from '../../assets/logo/LOGO.svg'
-// SYSTEME
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 export default function Header() {
   return (
     <header className="header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <nav>
-        <ul className="menu">
-          <li className="menu_item">
-            <Link to="/">Accueil</Link>
+      <img src={logo} className="header__logo" alt="logo" />
+      <nav className="header__nav">
+        <ul className="header__menu">
+          <li id="accueil" className="menu__item">
+            <NavLink
+              className={({ isActive }) => (isActive ? 'menu__item--active' : '')}
+              to="/"
+            >
+              Accueil
+            </NavLink>
           </li>
-          <li className="menu_item">
-            <Link to="/APropos">A Propos</Link>
+
+          <li id="apropos" className="menu__item">
+            <NavLink
+              className={({ isActive }) => (isActive ? 'menu__item--active' : '')}
+              to="/APropos"
+            >
+              A Propos
+            </NavLink>
           </li>
         </ul>
       </nav>
