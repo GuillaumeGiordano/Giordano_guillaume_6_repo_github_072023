@@ -1,6 +1,5 @@
 // SYSTEM
-import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { useFetch } from '../../utils/hooks/useFetch'
 import useFindLogement from '../../utils/hooks/useFindLogement'
 import useName from '../../utils/hooks/useName'
@@ -59,10 +58,12 @@ export default function FicheLogement() {
           </div>
         </div>
         <div className="accomodation__footer">
-          <Collapse title="Description" width="45%">
+          <Collapse title="Description" width="width--45">
+            {/* CHILDREEN */}
             <p className="">{logement.description}</p>
           </Collapse>
-          <Collapse title="Equipements" width="45%">
+          <Collapse title="Equipements" width="width--45">
+            {/* CHILDREEN */}
             <ul className="equipments">
               {logement.equipments.map((item, index) => (
                 <li key={index} className="equipments__item">

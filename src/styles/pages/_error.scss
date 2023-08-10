@@ -24,6 +24,7 @@
 
   &__text{
     font-size: 36px;
+    text-align: center;
     margin: 30px;
   }
 
@@ -40,6 +41,22 @@
 
 @media screen and (max-width: 600px) {
 
+  .error {
+ 
+    &__title{
+      font-size: 7em;
+    }
+  
+    &__text{
+      font-size: 1em;
+      text-align: center;
+      margin: 30px;
+    }
+  
+    &__link{
+      font-size: 1em;
+    }
+  }
   
 
 }

@@ -5,11 +5,13 @@ import row from '../../assets/row.png'
 export default function Collapse({ title, children, width }) {
   const [isOpen, changeMe] = useToggle()
   const contentRef = useRef()
+  const myClassWidth = width
 
   return (
-    <div className="collapse" style={{ width: width }}>
+    // <div className="collapse" style={{ width: width }}>
+    <div className={'collapse ' + myClassWidth}>
       <div
-        className={isOpen ? 'collapse-btn collapse-btn--open' : 'collapse-btn'}
+        className={isOpen ? 'collapse__btn collapse__btn--open' : 'collapse__btn'}
         onClick={changeMe}
       >
         <span>{title}</span>
