@@ -1,5 +1,4 @@
 .header {
-  // border: 1px solid red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -11,27 +10,24 @@
   margin-top: 15px;
 
     &__logo{
-      // border: 1px solid red;
       height: 100%;
     }
 
     &__nav{
-      // border: 1px solid black;
       display: flex;
       align-items: center;
       height: 100%;
     }
 
     &__menu {
-      // border: 1px solid red;
       display: flex;
       list-style: none;
       padding: 0px;
 
       .menu__item {
-        // border: 1px solid red;
         margin: 0 25px 0 25px;
-        
+        width: 80px;
+        text-align: center;
           &--active{
             text-decoration: underline !important;
           }
@@ -39,16 +35,28 @@
     }
 }
 
+@media screen and (max-width: $tablette) {
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $mobile) {
   
   .header{
     height: 45px;
-
     .menu__item {
-      margin: 0 15px 0 15px;
+      margin: 0 8px 0 8px;
+      width: 60px;
     }
-
   }
-
+}
+@media screen and (max-width: 320px) {
+  
+  .header{
+    &__logo{
+      width: 50%;
+    }
+    .menu__item {
+      margin: 0 4px 0 4px;
+      width: 60px;
+    }
+  }
 }

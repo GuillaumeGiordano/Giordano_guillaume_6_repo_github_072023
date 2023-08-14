@@ -24,10 +24,10 @@
     color: #fff;
   }
 }
-
-@media screen and (max-width:779px) {
+@media screen and (max-width: $tablette) {
+}
+@media screen and (max-width: $mobile) {
   .footer {
-      
     &__text{
       width: 120px;
       font-size: 0.8em;

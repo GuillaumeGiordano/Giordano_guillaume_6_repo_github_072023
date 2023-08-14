@@ -8,7 +8,6 @@ export default function Collapse({ title, children, width }) {
   const myClassWidth = width
 
   return (
-    // <div className="collapse" style={{ width: width }}>
     <div className={'collapse ' + myClassWidth}>
       <div
         className={isOpen ? 'collapse__btn collapse__btn--open' : 'collapse__btn'}

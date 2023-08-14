@@ -15,9 +15,9 @@ function Card({ id, title, cover, description }) {
 // Autre methode pour export la fonction
 export default Card
 
-// Permet de typer les variables !!!
+// Permet de typer les variables !
 Card.propTypes = {
-  id: PropTypes.string.isRequired, //permet d'exiger une valeur !!!
+  id: PropTypes.string.isRequired, //permet d'exiger une valeur !
   title: PropTypes.string.isRequired,
   cover: PropTypes.string,
   description: PropTypes.string,

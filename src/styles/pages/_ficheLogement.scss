@@ -100,9 +100,9 @@
         }
     }
 }
-
-@media screen and (max-width: 779px ){
-    
+@media screen and (max-width: $tablette) {
+}
+@media screen and (max-width: $mobile ){
 
     .accomodation{
         &__body{

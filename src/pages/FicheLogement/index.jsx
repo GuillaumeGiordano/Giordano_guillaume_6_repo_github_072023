@@ -25,9 +25,6 @@ export default function FicheLogement() {
     return <Error />
   }
 
-  console.log(logement)
-  console.log(nameSplit)
-
   return (
     <>
       <section className="accomodation" id={logement.id}>

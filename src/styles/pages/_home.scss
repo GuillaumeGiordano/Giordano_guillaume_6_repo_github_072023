@@ -15,6 +15,7 @@
 
   .header__title {
     margin: 0px;
+    padding: 10px;
     text-align: center;
     position: relative;
     top: 50%;
@@ -26,12 +27,12 @@
 }
 
 .main__ctn {
-  padding: 50px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content:space-between;
+  padding: 50px;
   row-gap: 50px;
   border-radius: 24px;
   background: #f6f6f6;
@@ -42,7 +43,19 @@
   }
 }
 
-@media screen and (max-width: 779px) {
+
+@media screen and (max-width: $tablette) {
+  .main__ctn { 
+    padding: 40px;
+    row-gap: 40px; 
+    .link{
+      flex-basis: 47%;
+      height: 340px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile) {
   .main__header {
     height: 120px;
 
@@ -58,6 +71,5 @@
     flex-direction:column;
     flex-wrap: nowrap;
     gap: 20px;
-    
   }
 }

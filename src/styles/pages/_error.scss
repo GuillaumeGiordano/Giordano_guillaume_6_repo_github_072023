@@ -38,8 +38,9 @@
     animation-iteration-count: infinite;
   }
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: $tablette) {
+}
+@media screen and (max-width: $mobile) {
 
   .error {
  
@@ -58,5 +59,4 @@
     }
   }
   
-
 }
