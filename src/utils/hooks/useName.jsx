@@ -10,15 +10,10 @@ export default function useName(isLoading, logement) {
         const makeSplit = logement.host.name.split(' ')
 
         if (makeSplit) {
-          //   makeSplit.forEach((element) => {
-          //     setNameSplit((addName) => [...addName, element])
-          //   })
           setNameSplit((i) => [...i, makeSplit])
         }
       }
     }
   }, [isLoading, logement])
-  console.log(nameSplit)
-
   return nameSplit
 }

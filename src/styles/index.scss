@@ -43,8 +43,9 @@ body {
 @import './components/slider';
 @import './components/loader';
 
-
-@media screen and (max-width: 779px) {
+@media screen and (max-width: $tablette) {
+}
+@media screen and (max-width: $mobile) {
   
   *{
     font-size: 98%;
