@@ -7,10 +7,16 @@ import Loader from '../../components/Loader'
 import falaise from '../../assets/img/falaises.jpg'
 
 export default function Home() {
-  const { data, isLoading, error } = useFetch(`data.json`)
+  const { data, isLoading, error } = useFetch('Kasa/data.json')
+  console.log(data)
 
   if (error) {
-    return <span>Il y a un problème</span>
+    return (
+      <>
+        <span>Il y a un problème</span>
+        <Loader />
+      </>
+    )
   }
 
   if (isLoading) {

@@ -5,9 +5,14 @@ export default function useFindLogement(isLoading, data, idLogement) {
 
   useEffect(() => {
     if (!isLoading) {
-      const logementFound = data.find((item) => item.id === idLogement)
-      if (logementFound) {
-        setLogement(logementFound)
+      try {
+        console.log(data)
+        const logementFound = data.find((item) => item.id === idLogement)
+        if (logementFound) {
+          setLogement(logementFound)
+        }
+      } catch (error) {
+        console.log('ca ne marche pas !')
       }
     }
   }, [isLoading, data, idLogement])
