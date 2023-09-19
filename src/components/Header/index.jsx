@@ -10,7 +10,7 @@ export default function Header() {
           <li id="accueil" className="menu__item">
             <NavLink
               className={({ isActive }) => (isActive ? 'menu__item--active' : '')}
-              to="/"
+              to="/Kasa"
             >
               Accueil
             </NavLink>
@@ -19,7 +19,7 @@ export default function Header() {
           <li id="apropos" className="menu__item">
             <NavLink
               className={({ isActive }) => (isActive ? 'menu__item--active' : '')}
-              to="/APropos"
+              to="/Kasa/APropos"
             >
               A Propos
             </NavLink>

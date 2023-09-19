@@ -40,7 +40,7 @@ export default function Home() {
               <Link
                 className="link"
                 key={logement.id}
-                to={'/FicheLogement/' + logement.id}
+                to={'FicheLogement/' + logement.id}
               >
                 <Card
                   id={logement.id}

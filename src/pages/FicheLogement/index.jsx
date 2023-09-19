@@ -10,7 +10,7 @@ import Slider from '../../components/Slider'
 import Stars from '../../components/Stars'
 
 export default function FicheLogement() {
-  const { data, isLoading, error } = useFetch('Kasa/data.json')
+  const { data, isLoading, error } = useFetch('../data.json')
   console.log(data)
   const { idLogement } = useParams()
   const [logement] = useFindLogement(isLoading, data, idLogement)

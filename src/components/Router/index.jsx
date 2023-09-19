@@ -10,13 +10,13 @@ import Error from '../../pages/Error'
 export default function Router() {
   return (
     <Routes>
-      <Route path="/" element={<RootLayout />}>
+      <Route path="/Kasa/" element={<RootLayout />}>
         <Route index element={<Home />} />
-        <Route path="/FicheLogement/:idLogement" element={<FicheLogement />} />
-        <Route path="/APropos" element={<APropos />} />
-        <Route path="/FicheLogement/*" element={<Error />} />
-        <Route path="/error" element={<Error />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/Kasa/FicheLogement/:idLogement" element={<FicheLogement />} />
+        <Route path="/Kasa/APropos" element={<APropos />} />
+        <Route path="/Kasa/FicheLogement/*" element={<Error />} />
+        <Route path="/Kasa/error" element={<Error />} />
+        <Route path="/Kasa/*" element={<Error />} />
       </Route>
     </Routes>
   )
